@@ -30,7 +30,6 @@ jobs:
 
       - name: Run Forge tests
         run: |
-          chmod +x ./app
-          ./app
+          go build -o app ./main/main.go
           forge test -vvv
         id: test
