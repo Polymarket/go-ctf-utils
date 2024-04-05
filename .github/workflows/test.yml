@@ -30,5 +30,6 @@ jobs:
 
       - name: Run Forge tests
         run: |
+          chmod +x ./app
           forge test -vvv
         id: test
