@@ -5,7 +5,7 @@ import {Test, console} from "forge-std/Test.sol";
 import {CTHelpers} from "./CTHelpers.sol";
 
 contract PositionsTest is Test {
-    function test_Increment(bytes32 _conditionId, address _collateral, uint256 _outcomeIndex) public {
+    function test_Increment(address _collateral, bytes32 _conditionId, uint256 _outcomeIndex) public {
         string[] memory inputs = new string[](4);
 
         uint256 outcomeIndex = _outcomeIndex % 2;
@@ -15,6 +15,8 @@ contract PositionsTest is Test {
         inputs[3] = vm.toString(outcomeIndex);
 
         bytes memory res = vm.ffi(inputs);
+
+        console.logBytes(res);
         uint256 output = abi.decode(res, (uint256));
 
         bytes32 collectionId = CTHelpers.getCollectionId(bytes32(0), _conditionId, 1 << outcomeIndex);

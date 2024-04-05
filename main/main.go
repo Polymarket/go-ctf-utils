@@ -29,5 +29,9 @@ func main() {
 	// Call the utility function
 	result := utils.CalculatePositionId(collateral, conditionId, outcomeIndex)
 
-	fmt.Printf("%x", result)
+	hexString := result.Text(16)
+	// Pad the hex string to 64 characters (32 bytes) with leading zeros
+	paddedHexString := fmt.Sprintf("%064s", hexString)
+	// Print the padded hex string
+	fmt.Println(paddedHexString)
 }
