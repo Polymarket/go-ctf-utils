@@ -5,7 +5,7 @@ import {Test, console} from "forge-std/Test.sol";
 import {CTHelpers} from "./CTHelpers.sol";
 
 contract PositionsTest is Test {
-    function test_Increment(address _collateral, bytes32 _conditionId, uint256 _outcomeIndex) public {
+    function test_fuzz_position_ids(address _collateral, bytes32 _conditionId, uint256 _outcomeIndex) public {
         string[] memory inputs = new string[](4);
 
         uint256 outcomeIndex = _outcomeIndex % 2;
