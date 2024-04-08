@@ -14,5 +14,5 @@ test:
 	@echo "----------------------------------------------------------------"
 	@echo " ⚙️  Testing the code..."
 	@echo "----------------------------------------------------------------"
-	GOPRIVATE=${PRIVATE_REPOS} go test ./... -v 
+	GOPRIVATE=${PRIVATE_REPOS} go test ./... -v
 	@echo "Tests complete!"

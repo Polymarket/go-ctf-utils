@@ -17,6 +17,9 @@
 # Go workspace file
 go.work
 
+# solidity
 out
 cache
-app
+
+# test harness
+harness
