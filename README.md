@@ -1,8 +1,8 @@
-## go-ctf-utils
+# go-ctf-utils
 
 Calculate CTF ERC1155 position ids
 
-### Usage 
+## Usage
 
 ```go
 collateral := common.HexToAddress("0x2791bca1f2de4661ed88a30c99a7a9449aa84174")
